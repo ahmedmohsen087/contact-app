@@ -1,7 +1,7 @@
 import 'package:contact_app/screens/home_page/widgets/contact_item.dart';
 import 'package:flutter/material.dart';
 
-import '../../../models/Contact_model.dart';
+import '../../../models/contact_model.dart';
 
 class ContactsPage extends StatefulWidget {
   final VoidCallback onContactsChanged;

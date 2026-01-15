@@ -4,7 +4,7 @@ import 'package:contact_app/core/theme/app_color.dart';
 import 'package:contact_app/screens/home_page/pages/contacts_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../../models/Contact_model.dart';
+import '../../../models/contact_model.dart';
 import '../widgets/bottom_sheet.dart';
 import 'home_empty_page.dart';
 

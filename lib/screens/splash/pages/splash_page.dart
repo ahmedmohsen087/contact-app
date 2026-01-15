@@ -17,25 +17,23 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, HomePage.routeName);
+      if(mounted){
+        Navigator.pushReplacementNamed(context, HomePage.routeName);
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
 
-    var size = MediaQuery.of(context).size;
-    return  Stack(
-      children: [
-        Container(
-          color: AppColors.primaryColor,
-          height: size.height,
-          width: size.width,
-          child: Lottie.asset('assets/animations/Contact Us.json'),
+    return  Container(
+      color: AppColors.primaryColor,
 
-        ),
+      child: Lottie.asset('assets/animations/Contact Us.json',
+        fit: BoxFit.contain,
 
-      ],
+      ),
+
     );
   }
 }

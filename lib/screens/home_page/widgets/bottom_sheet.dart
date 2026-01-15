@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:contact_app/core/theme/app_color.dart';
-import 'package:contact_app/models/Contact_model.dart';
+import 'package:contact_app/models/contact_model.dart';
 import 'package:contact_app/screens/home_page/widgets/input_card.dart';
 import 'package:contact_app/screens/home_page/widgets/text_form_item.dart';
 import 'package:flutter/material.dart';

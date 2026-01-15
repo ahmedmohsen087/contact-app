@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../models/Contact_model.dart';
+import '../../../models/contact_model.dart';
 
 class ContactsStorage {
   static const _key = 'contacts';
