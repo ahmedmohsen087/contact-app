@@ -1,7 +1,7 @@
-import 'package:contact_app/features/splash/pages/splash_page.dart';
+import 'package:contact_app/screens/home_page/pages/home_page.dart';
+import 'package:contact_app/screens/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
-import 'features/home_page/pages/home_page.dart';
 
 void main (){
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashPage.routeName,
       routes:  {
         SplashPage.routeName:(context)=>const SplashPage(),
-        HomePage.routeName:(context)=>const HomePage(),
+        HomePage.routeName:(context)=> HomePage(),
 
 
       }
