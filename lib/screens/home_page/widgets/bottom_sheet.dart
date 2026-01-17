@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../core/constants/app_constants.dart';
+import 'local_storge.dart';
 
 class BottomSheetItem extends StatefulWidget {
  const  BottomSheetItem({super.key});
@@ -103,11 +104,12 @@ class _BottomSheetItemState extends State<BottomSheetItem> {
                             userName: nameController.text,
                             email: emailController.text,
                             phone: phoneController.text,
-                            imageFile: image!),
+                            imagePath: image!.path),
 
                       );
-                     // await ContactsStorage.saveContacts();
                       Navigator.pop(context);
+                      await ContactsStorage.saveContacts();
+
                     }
 
                   },
