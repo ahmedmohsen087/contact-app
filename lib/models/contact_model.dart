@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 class ContactModel {
@@ -5,12 +6,15 @@ class ContactModel {
   String userName ;
   String email ;
   String phone ;
-  File imageFile ;
+  final String imagePath;
+
+  //File imageFile ;
  ContactModel ({
     required this.userName,
     required this.email,
     required this.phone,
-    required this.imageFile,
+   required this.imagePath,
+    //required this.imageFile,
 
 });
 
@@ -21,8 +25,9 @@ static  List<ContactModel> contacts = [];
     return {
       'name': userName,
       'phone': phone,
-      'image': imageFile,
+     // 'image': imageFile,
       'email': email,
+      'imagePath': imagePath,
     };
   }
 
@@ -31,9 +36,13 @@ static  List<ContactModel> contacts = [];
       userName: map['name'],
       phone: map['phone'],
       email: map['email'],
-      imageFile: map['image'],
+     imagePath: map['imagePath'],
+     // imageFile: map['image'],
     );
-  }
 
+
+    }
+
+    File get imageFile => File(imagePath);
 
 }

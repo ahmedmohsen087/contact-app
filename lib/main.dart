@@ -3,7 +3,9 @@ import 'package:contact_app/screens/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
 
-void main (){
+void main ()async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       initialRoute: SplashPage.routeName,
       routes:  {

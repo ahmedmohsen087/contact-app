@@ -2,6 +2,7 @@ import 'package:contact_app/screens/home_page/widgets/contact_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/contact_model.dart';
+import '../widgets/local_storge.dart';
 
 class ContactsPage extends StatefulWidget {
   final VoidCallback onContactsChanged;
@@ -27,8 +28,9 @@ class _ContactsPageState extends State<ContactsPage> {
             childAspectRatio: 0.7,
           ),
           itemBuilder: (context, index) => ContactItem(
-            deleteContact: (int index){
+            deleteContact: (int index) async {
               ContactModel.contacts.removeAt(index);
+              await ContactsStorage.saveContacts();
               setState(() {
                 widget.onContactsChanged();
               });

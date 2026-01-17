@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../../models/contact_model.dart';
 import '../widgets/bottom_sheet.dart';
+import '../widgets/local_storge.dart';
 import 'home_empty_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,6 +18,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    _loadContacts();
+  }
+
+  Future<void> _loadContacts() async {
+    await ContactsStorage.loadContacts();
+    if (mounted) setState(() {});
+  }
+
 
   @override
   Widget build(BuildContext context) {
