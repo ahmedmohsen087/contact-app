@@ -30,7 +30,11 @@ final Function deleteContact ;
             children: [
               ClipRRect(
                 borderRadius: BorderRadiusGeometry.circular(8),
-                  child: Image.file(contactModel.imageFile,
+                  child: AspectRatio(
+                    aspectRatio: 3 / 2,
+                    child: Image.file(contactModel.imageFile,
+                      fit: BoxFit.cover,
+                    ),
                   )),
               Container(
                 margin: EdgeInsets.all(8),
